@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edd.practica3;
+
+/**
+ *
+ * @author deado
+ */
+public class EDDPRACTICA3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     
+//ASIGNACION DE LOS DATOS DEL ARREGLO(SON ALEATORIOS)
+            int [][] aiArre = new int [5][5];
+        for(int i = 0;i < aiArre.length ; i++){
+            for(int j = 0;j < aiArre.length ; j++){
+                aiArre[i][j] =(int)(Math.random()*100);
+               
+        }
+        }
+//IMPRIMIR ORIGINAL
+            System.out.println("IMPRIMIENDO ORIGINAL");
+        for(int i = 0;i < aiArre.length ; i++){
+            for(int j = 0;j < aiArre.length ; j++){
+                System.out.print(" "+ aiArre[i][j]);
+        }
+//SE AGRAGA ESTE SYSTEM PARA QUE SEPARE LOS ARREGLOS DE 5 EN 5
+            System.out.println(" ");
+        }
+//COPIA DEL ARREGLO
+       
+            int aiCopia[][] = new int [5][5];
+        for (int i=aiArre.length-1; i>=0;i--){
+           for(int j=aiArre.length-1; j >=0;j--){
+            aiCopia[i][j] = aiArre[i][j];
+        }
+        }
+//IMPRIMIR COPIA
+            System.out.println(" ");
+            System.out.println("IMPRIMIENDO COPIA");
+            
+         /*for(int i = 0;i < aiArre.length ; i++){
+            for(int j = 0;j < aiArre.length ; j++){
+                System.out.print(" "+ aiCopia[i][j]);
+        }
+             System.out.println(" ");
+        }*/
+        
+        for (int i=aiArre.length-1; i>=0;i--){
+            for(int j=aiArre.length-1; j >=0;j--){
+             System.out.print(" "+ aiCopia[i][j]);
+        }
+                System.out.println(" ");
+        }
+        System.out.println(" ");
+        System.out.println(" Direccion del arreglo aiArre - " + aiArre + " - ");
+        System.out.println(" Direccion del arreglo aiCopia - " + aiCopia + " - ");
+    
+    }
+    
+
+}
