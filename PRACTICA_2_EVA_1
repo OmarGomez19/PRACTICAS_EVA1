@@ -1,0 +1,27 @@
+
+package edd.präctica2;
+
+
+public class EDDPRÄCTICA2 {
+
+    
+    public static void main(String[] args) {
+       
+    int[][] aiArreglo = new int[10][10];
+    
+    for(int i = 0; i < aiArreglo.length; i++ ){
+       for(int j = 0; j < aiArreglo.length; j++ ){
+          if(i==j){
+            aiArreglo[i][i]=1;
+          }else{
+            aiArreglo[i][i]=0;
+          }
+           System.out.print(aiArreglo[i][i] + " ");
+    }
+        System.out.print("\n");
+    }
+        System.out.println();
+       
+    }    
+    
+}
