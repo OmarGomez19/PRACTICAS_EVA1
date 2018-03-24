@@ -1,0 +1,53 @@
+package edd.präctica6;
+
+public class EDDPRÄCTICA6 {
+
+    public static void main(String[] args) {
+        
+            int[] aiArreglo = new int[50];
+            int iAcumPar = 0, iAcumImpar=0;
+//AGREGAMOS EL VALOR DE CADA DATO DEL ARREGLO(ALEATORIOS DEL 1 AL 100)       
+        for(int i = 0 ; i < aiArreglo.length ; i++){
+                aiArreglo[i] = (int)(Math.random()*100);
+        }
+//IMPRIMIMOS LOS VALORES DEL ARREGLO
+        for(int j = 0 ; j<aiArreglo.length; j++){
+                System.out.println(" Dato [" + (j+1) + "] del Arreglo es [ " + aiArreglo[j]+ " ] ");
+}
+//ASIGNAMOS SI EL VALOR DEL ARREGLO ES PAR E IMPRIME
+                System.out.println(" ");
+        for(int k = 0 ; k < aiArreglo.length ; k++ ){
+            if(aiArreglo[k]%2==0){
+                System.out.println("+El numero (" + aiArreglo[k] +") es par ");
+                iAcumPar++;
+            }
+//ASIGNAMOS SI EL VALOR DEL ARREGLO ES IMPAR E IMPRIME
+            else if(aiArreglo[k]%2!=0){
+                System.out.println("-El numero ("+ aiArreglo[k] + ") es impar");
+                iAcumImpar++;
+            }   
+        }
+//CREAMOS COPIA DEL ARREGLO
+            int[] aiCopiaArreglo = new int[50];
+        for(int l = 0; l < aiCopiaArreglo.length ; l++){
+                aiCopiaArreglo[l]=aiArreglo[l];
+        }
+        
+//IMPRIMIR COPIA DEL ARREGLO
+                System.out.println("  VALORES DE LA COPIA ");
+        for(int m = 0; m < aiArreglo.length; m++){
+                System.out.print(" : " + aiCopiaArreglo[m] );
+        }
+        
+            int[] aiArregloPar = new int [iAcumImpar];
+
+        
+                System.out.println(" ");
+                System.out.println("El total de numeros pares es : " +iAcumPar);
+                System.out.println("El total de numeros impares es : " +iAcumImpar);
+                System.out.println(" ");
+                System.out.println("aiArreglo ---> " + aiArreglo);
+                System.out.println("aiCopiaArreglo ---> " + aiCopiaArreglo);
+
+    }
+}
