@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edd.práctica5;
+
+/**
+ *
+ * @author deado
+ */
+public class EDDPRÁCTICA5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int iAcum = 0;
+//SE CREA EL ARREGLO DE TAMAÑO 50       
+        int[] aiArreglo = new int[50];
+    
+//SE LE DAN LOS VALORES AL ARREGLO (ALEATORIOS)        
+        for(int i = 0 ; i < aiArreglo.length ; i++){
+            aiArreglo[i] = (int)(Math.random()*10);
+        }
+//SE IMPRIMEN LOS VALORES DEL ARREGLO
+        for(int i = 0 ; i < aiArreglo.length ; i++){
+             System.out.print(aiArreglo[i] + " ");     
+        }
+//ESPACIO PARA ORDENAR
+        System.out.println("");
+//SE DEFINEN SI SON PARES O IMPARES
+        for(int i = 0 ; i < aiArreglo.length ; i++){
+//AQUI SE DEFINEN LOS PARES E IMPRIME
+        if((aiArreglo[i]%2==0)&&(aiArreglo[i]!=0)){
+            System.out.println(" Es par   ( " + aiArreglo[i] + " )");
+            iAcum++;
+//AQUI SE DEFINEN LOS IMPARES E IMPRIME
+       /* }else if(aiArreglo[i]%2!=0){
+            System.out.println(" Es impar ( " + aiArreglo[i] + " ) ");
+        }*/
+        }
+    }
+        System.out.println("");
+        System.out.println("Fueron [ " + iAcum + " ] Pares de [ " + (aiArreglo.length) + " ]");
+}
+}
