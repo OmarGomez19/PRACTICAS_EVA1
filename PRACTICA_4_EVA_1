@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edd.práctica4;
+
+/**
+ *
+ * @author deado
+ */
+public class EDDPRÁCTICA4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double [][] aiMatriz1 = new double [5][5];
+        double [][] aiMatriz2 = new double [5][5];
+        
+        for(int i = 0; i < aiMatriz1.length ; i++){
+            for(int j = 0; j < aiMatriz1.length ; j++){
+                aiMatriz1[i][j] = (Math.random()*10);
+        
+        }
+        }
+        
+        for(int i = 0; i < aiMatriz1.length ; i++){
+            for(int j = 0; j < aiMatriz1.length ; j++){
+                aiMatriz2[i][j] = (Math.random()*10);
+        
+        }
+        }
+        
+        double [][] aiResMatriz = new double[5][5];
+        for(int i = 0; i < aiMatriz1.length ; i++){
+            for(int j = 0; j < aiMatriz1.length ; j++){
+                aiResMatriz[i][j] = (aiMatriz1[i][j]*aiMatriz2[i][j]);
+        
+        }
+        }
+        
+        for(int i = 0; i < aiMatriz1.length ; i++){
+            for(int j = 0; j < aiMatriz1.length ; j++){
+                System.out.println("MatrizResultado [ " + i + " ] [ " + j + " ] = Matriz 1 [ " + i + " ] [ " + j + " ] X Matriz 2 [ " + i + " ] [ " + j + " ] ");
+                System.out.println("--> " + aiResMatriz[i][j] + " = " + aiMatriz1[i][j] + " X " + aiMatriz2[i][j]);
+                System.out.println(" ");
+        
+        }
+        }
+    }
+    
+}
